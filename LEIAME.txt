@@ -1,0 +1,5 @@
+Sugestão: utilizar o Overleaf para editar o documento.
+
+www.overleaf.com
+
+Basta criar uma conta e fazer upload do arquivo ZIP. O site permite compartilhar o documento com o(a) orientador(a), de modo que ambos podem editar.

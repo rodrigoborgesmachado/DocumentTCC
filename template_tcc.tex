@@ -1,0 +1,157 @@
+% ------------------------------------------------------------------------
+% PROPRIEDADES DO DOCUMENTO
+% ------------------------------------------------------------------------
+\documentclass[12pt,
+openright, 
+oneside, %
+%twoside, %TCC: Se seu texto tem mais de 100 páginas, descomente esta linha e comente a anterior
+a4paper,    %
+%english,   %
+brazil]{facom-ufu-abntex2}
+
+% ------------------------------------------------------------------------
+% PACOTES
+% ------------------------------------------------------------------------
+\pdfstringdefDisableCommands{\let\uppercase\relax}
+\usepackage{amsmath}
+\usepackage{icomma}
+\usepackage[portuguese,ruled]{algorithm2e}
+\usepackage{float}
+\usepackage{multirow}
+
+% ------------------------------------------------------------------------
+% INFO para CAPA e FOLHA DE ROSTO 
+% ------------------------------------------------------------------------
+\titulo{Análise de conteúdo sobre vulnerabilidades de segurança em redes sociais} %TCC
+
+\autor{Rodrigo Borges Machado} %TCC
+\data{2019}
+
+\orientador{Rodrigo Sanches Miani} %TCC
+%\coorientador{Nome completo do orientador caso tenha} %TCC
+
+\begin{document}
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+%\pretextual
+\imprimircapa
+\imprimirfolhaderosto
+
+
+% --- Inserir folha de aprovação --- %
+\input{preTextuais/folhaAprovacao}
+% \includepdf{folhadeaprovacao_final.pdf} % TCC: depois de aprovado o trabalho, descomente esta linha e comente a anterior para incluir o scan da folha de aprovação.
+
+%% OBS.: as seções dedicatória, agradecimento e epígrafe não são obrigatórias. Só as mantenha se achar pertinente.
+
+% --- Dedicatória --- %
+\imprimirdedicatoria{Aos meus pais
+Hélio Antônio Machado e
+Maria Alice Borges da Silveira e \\irmãs Andréa Caroline Machado, Andressa Borges Machado, Luciana Cristina Machado e Simone Cristina Machado}
+
+% --- Agradecimentos --- %
+\imprimiragradecimentos{
+Agradeço primeiramente a Deus, por possibilitar que eu caminhasse por todo esse caminho de luta com a cabeça sempre erguida, com força para passar pelos obstáculos e saúde para seguir lutando.
+
+Aos meus pais por todo amor, carinho, incentivo e apoio que sempre me deram. Por sempre me incentivarem a buscar mais, a querer mais, e nunca parar de lutar. Por possibilitar uma educação boa e ensinar a ter a humildade que a vida pede.
+
+Às minhas irmãs por todo carinho, apoio e compreensão pelo tempo que tive que abdicar para dedicar a minha formação.
+
+Aos meus amigos pelo incentivo e compreensão durante toda essa jornada. Principalmente por saberem como me animar quando estava em momentos difíceis. Obrigado à Confraria por existir e me fazer tão bem.
+
+À minha namorada Milena Bertolini que sempre esteve ao meu lado enquanto fiz esse trabalho. Obrigado pelo carinho e por todo amor que me deu. Desculpe pelos compromissos cancelados, teremos toda a vida para compensar. Obrigado por estar sempre ao meu lado.
+
+A todos os professores que me insentivaram, desde os professores do meu ensino fundamental, médio e agora no ensino superior. Um obrigado especial aos professores do Instituto Federal do Triângulo Mineiro, que sempre me ajudaram mesmo depois de eu já ter formado no ensino médio.
+
+Ao meu orientador, Professor Doutor Rodrigo Miani, pela paciência, prontidão e confiança. Obrigado por ser sempre um amigo desde as aulas na classe, até no stress desse trabalho. Obrigado por ter sempre um tempo para poder conversar, seja assunto pessoal ou não.
+}
+
+% --- Epígrafe --- %
+\imprimirepigrafe{"Que todos os nossos esforços estejam sempre focados no desafio à impossibilidade. Todas as grandes conquistas humanas vieram daquilo que parecia impossível."\\Charles Chaplin.}
+	
+% --- Resumo em português --- %
+%
+\begin{resumo} %TCC:
+Esse trabalho utiliza conceitos de análise de dados para avaliar a ocorrência de vulnerabilidades descobertas em sistemas operacionais Windows, sistemas operacionais diferentes do Windows e aplicações Web nos últimos dez anos usando uma base de dados pública mantida pelo NIST \textit{(National Institute of Standards and Technology)}. Ao longo da pesquisa foi utilizado o cálculo de índice de sazonalidade e a função de autocorrelação para investigar se as tendências encontradas em um estudo anterior continuam as mesmas, além de analisar vulnerabilidades presentes em softwares que não foram contemplados em tal trabalho. Os resultados encontrados indicam duas tendências de sazonalidade: aumento de vulnerabilidades reportadas em junho para todos os sistemas operacionais investigados e diminuição do número de vulnerabilidades em janeiro em todos os softwares analisados.
+
+
+%% Rodrigo - complemente com uma frase sobre os resultados. Algo do tipo: "Os resultados mostram que..."
+ 
+  \vspace{\onelineskip}
+  \noindent
+  \textbf{Palavras-chave}: Vulnerabilidade de Segurança, Segurança da Informação, CVE, Twitter, . %TCC:
+ \end{resumo}
+
+% --- lista de ilustrações --- %
+\listailustracoes
+
+% --- lista de tabelas --- %
+\listatabelas
+
+% --- lista de abreviaturas e siglas --- %
+\input{preTextuais/Abreviaturas}
+
+% --- lista de símbolos --- %
+%\input{preTextuais/simbolos} % caso não existe símbolos no trabalho, comente esta linha
+
+% --- sumario --- %
+\sumario
+
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+
+% --- Introdução --- %
+\include{capitulos/introducao}
+
+% ---  Fundamentação teórica --- %
+\include{capitulos/revisaoBibliografica}
+
+% --- Desenvolvimento --- %
+\include{capitulos/desenvolvimento}
+
+% --- Conclusão --- %
+\include{capitulos/resultados}
+
+% --- Conclusão --- %
+\include{capitulos/conclusao}
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+% --- Referências bibliográficas --- %
+\bibliography{bibliografia}
+
+% --- Apêndices --- %
+% só mantenha se for pertinente.
+%\begin{apendicesenv}
+%\partapendices % Imprime uma página indicando o início dos apêndices
+
+% --- Apendice 1--- %
+%\include{apendices/apendice1}
+
+%\end{apendicesenv}
+
+% --- Anexos --- %
+% so mantenha se pertinente.
+%\begin{anexosenv}
+%\partanexos % Imprime uma página indicando o início dos anexos
+
+% --- Anexo 1 --- %
+%\include{anexos/anexo1}
+
+%\end{anexosenv}
+
+
+% ------------------------------------------------------------------------
+% FIM DO DOCUMENTO
+% ------------------------------------------------------------------------
+\printindex
+\end{document}
